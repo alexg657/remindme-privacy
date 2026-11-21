@@ -18,8 +18,7 @@
       border-radius: 999px; padding: 0.45rem 0.9rem; font: inherit; text-decoration: none;
     }
     button.on { background: #e0c36a; color: #1a1a1a; border-color: #e0c36a; }
-    main > section { display: none; }
-    main > section.on { display: block; }
+    main > section[hidden] { display: none !important; }
     [lang="en"], [lang="ru"] { direction: ltr; text-align: left; }
   </style>
 </head>
@@ -34,12 +33,11 @@
 
 <section lang="he" dir="rtl" class="on">
   <h1>תנאי שימוש — RemindMe</h1>
-  <p class="meta">עודכן: 21 בנובמבר 2026. זהו נוסח לבדיקה משפטית, לא חוות דעת של עורך דין.</p>
-  <p>המפעיל הוא אדם פרטי, לא חברה. השם המשפטי שמופיע בחשבון Google Play טעון השלמה ידנית לפני פרסום. לפניות: <a href="mailto:alexg657@gmail.com">alexg657@gmail.com</a>.</p>
+  <p class="meta">עודכן: 21 בנובמבר 2026</p>
+  <p>המפעיל הוא אדם פרטי, לא חברה. לפניות: <a href="mailto:alexg657@gmail.com">alexg657@gmail.com</a>.</p>
 
   <h2>מהות השירות</h2>
   <p>RemindMe היא אפליקציית עזר לתזכורות ולמעקב אישי אחר נטילת תרופות. היא לא נותנת ייעוץ רפואי, לא מאבחנת, לא קובעת טיפול ולא משנה מינונים. אין להשתמש בה במקום רופא או רוקח.</p>
-  <p>הוספת האזהרה הזו לא קובעת לבדה את הסיווג הרגולטורי של האפליקציה. הסיווג טעון בדיקה מקצועית לפני פרסום.</p>
 
   <h2>אחריות המשתמש</h2>
   <p>המשתמש אחראי להזין מידע נכון, לבדוק שמות תרופות ומינונים, להגדיר זמני נטילה לפי ההנחיה שקיבל, ולעקוב אחר הטיפול בפועל. אין לשנות טיפול על סמך האפליקציה בלבד.</p>
@@ -60,7 +58,7 @@
 
   <h2>מגבלת אחריות</h2>
   <p>השירות ניתן ככלי עזר, בלי התחייבות שהוא יהיה זמין, מדויק או נטול תקלות בכל עת. בכפוף לדין, המפעיל לא אחראי לנזק שנגרם מהזנת מידע שגוי, משימוש בניגוד לאזהרות, מהסתמכות על האפליקציה כאמצעי רפואי יחיד, מתקלה אצל שירות חיצוני, או משיבוש בהתראה שאי אפשר למנוע באופן סביר.</p>
-  <p>אין באמור פטור מכל אחריות. אין ויתור על אחריות לנזק גוף, לזדון, או על אחריות אחרת שהדין אינו מאפשר לשלול. אין ויתור על זכות פנייה לבית משפט. שום דבר כאן אינו מגביל זכות או אחריות שאי אפשר להגביל לפי הדין החל, לרבות דין צרכני מחייב וחוק החוזים האחידים ככל שהוא חל. הניסוח טעון בדיקת עורך דין לפני פרסום, גם לגבי הפצה מחוץ לישראל.</p>
+  <p>אין באמור פטור מכל אחריות. אין ויתור על אחריות לנזק גוף, לזדון, או על אחריות אחרת שהדין אינו מאפשר לשלול. אין ויתור על זכות פנייה לבית משפט או על זכות צרכנית מחייבת, בישראל או במדינה אחרת שבה הדין המקומי כופה זכות כזו. אישור התנאים אינו מונע פנייה לבית משפט.</p>
 
   <h2>שינויים</h2>
   <p>האפליקציה והתנאים עשויים להתעדכן. שינוי מהותי בתנאים יוצג שוב לאישור. אין למפעיל זכות בלתי מוגבלת לבטל תכונה ששולמה מראש בלי להתחשב בדין.</p>
@@ -69,14 +67,13 @@
   <p>על השימוש חל הדין הישראלי, בלי לגרוע מהוראות מחייבות במדינה שבה השירות מופץ.</p>
 </section>
 
-<section lang="en">
+<section lang="en" hidden>
   <h1>Terms of use — RemindMe</h1>
-  <p class="meta">Updated: 21 November 2026. This text is for legal review. It is not a lawyer’s opinion.</p>
-  <p>The operator is an individual, not a company. The legal name shown on the Google Play account still has to be filled in by hand before publication. Contact: <a href="mailto:alexg657@gmail.com">alexg657@gmail.com</a>.</p>
+  <p class="meta">Updated: 21 November 2026</p>
+  <p>The operator is an individual, not a company. Contact: <a href="mailto:alexg657@gmail.com">alexg657@gmail.com</a>.</p>
 
   <h2>The service</h2>
   <p>RemindMe is an aid for reminders and personal tracking of medicine taking. It does not give medical advice, diagnose, decide treatment, or change doses. Do not use it instead of a doctor or pharmacist.</p>
-  <p>Adding this warning does not by itself decide the regulatory classification of the app. That classification needs a professional check before publication.</p>
 
   <h2>Your responsibility</h2>
   <p>You are responsible for entering correct information, checking medicine names and doses, setting times according to the instructions you received, and following the treatment in practice. Do not change treatment based only on the app.</p>
@@ -97,7 +94,7 @@
 
   <h2>Limit of liability</h2>
   <p>The service is an aid, with no commitment that it will be available, accurate, or free of faults at all times. Subject to the law, the operator is not responsible for harm that comes from incorrect information you entered, from use contrary to the warnings, from relying on the app as the only medical means, from a fault in an external service, or from an alert failure that could not reasonably be prevented.</p>
-  <p>This is not a waiver of all liability. It does not waive liability for bodily injury, wilful misconduct, or any other liability the law does not allow to be excluded. It does not waive the right to go to court. Nothing here limits a right or a liability that cannot be limited under the law that applies, including mandatory consumer law and Israel’s Standard Contracts Law where that law applies. A lawyer should review this text before publication, including for distribution outside Israel.</p>
+  <p>This is not a waiver of all liability. It does not waive liability for bodily injury, wilful misconduct, or any other liability the law does not allow to be excluded. It does not waive the right to go to court or a mandatory consumer right, in Israel or in another country where local law requires that right. Accepting these terms does not prevent a claim in court.</p>
 
   <h2>Changes</h2>
   <p>The app and these terms may be updated. A material change to the terms is shown again for acceptance. The operator does not have an unlimited right to remove a feature that was paid for in advance without regard to the law.</p>
@@ -106,14 +103,13 @@
   <p>Israeli law applies to use of the app, without limiting mandatory rules in a country where the service is distributed.</p>
 </section>
 
-<section lang="ru">
+<section lang="ru" hidden>
   <h1>Условия использования — RemindMe</h1>
-  <p class="meta">Обновлено: 21 ноября 2026. Это текст для юридической проверки, а не заключение юриста.</p>
-  <p>Оператор — частное лицо, не компания. Юридическое имя в аккаунте Google Play нужно дополнить вручную перед публикацией. Контакт: <a href="mailto:alexg657@gmail.com">alexg657@gmail.com</a>.</p>
+  <p class="meta">Обновлено: 21 ноября 2026</p>
+  <p>Оператор — частное лицо, не компания. Контакт: <a href="mailto:alexg657@gmail.com">alexg657@gmail.com</a>.</p>
 
   <h2>Суть сервиса</h2>
   <p>RemindMe — вспомогательное приложение для напоминаний и личного учёта приёма лекарств. Оно не даёт медицинских консультаций, не ставит диагноз, не назначает лечение и не меняет дозы. Не используйте его вместо врача или фармацевта.</p>
-  <p>Само по себе это предупреждение не определяет регуляторную классификацию приложения. Классификацию нужно проверить у специалиста до публикации.</p>
 
   <h2>Ответственность пользователя</h2>
   <p>Пользователь отвечает за верный ввод, проверку названий и доз, установку времени по полученным указаниям и за фактическое следование лечению. Не меняйте лечение только на основании приложения.</p>
@@ -134,7 +130,7 @@
 
   <h2>Ограничение ответственности</h2>
   <p>Сервис предоставляется как вспомогательное средство, без обязательства быть доступным, точным и безошибочным всегда. В пределах закона оператор не отвечает за вред от неверного ввода, от использования вопреки предупреждениям, от опоры на приложение как на единственное медицинское средство, от сбоя внешнего сервиса или от сбоя оповещения, который нельзя было разумно предотвратить.</p>
-  <p>Это не отказ от всякой ответственности. Нет отказа от ответственности за вред здоровью, умысел или иную ответственность, которую закон не позволяет исключить. Нет отказа от права обратиться в суд. Ничто здесь не ограничивает право или ответственность, которые нельзя ограничить по применимому закону, включая обязательное потребительское право и израильский закон о стандартных договорах, если он применяется. До публикации текст должен проверить юрист, в том числе для распространения вне Израиля.</p>
+  <p>Это не отказ от всякой ответственности. Нет отказа от ответственности за вред здоровью, умысел или иную ответственность, которую закон не позволяет исключить. Нет отказа от права обратиться в суд или от обязательного права потребителя, в Израиле или в другой стране, где местный закон сохраняет такое право. Согласие с условиями не мешает обратиться в суд.</p>
 
   <h2>Изменения</h2>
   <p>Приложение и условия могут обновляться. Существенное изменение условий снова показывается для согласия. У оператора нет неограниченного права отменить заранее оплаченную функцию без учёта закона.</p>
@@ -153,7 +149,9 @@
   function show(code) {
     if (code !== "he" && code !== "en" && code !== "ru") code = "he";
     document.querySelectorAll("main > section").forEach(function (section) {
-      section.classList.toggle("on", section.lang === code);
+      var active = section.lang === code;
+      section.hidden = !active;
+      section.classList.toggle("on", active);
     });
     document.querySelectorAll("nav button").forEach(function (button) {
       button.classList.toggle("on", button.getAttribute("data-lang") === code);

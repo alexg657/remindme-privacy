@@ -18,8 +18,7 @@
       border-radius: 999px; padding: 0.45rem 0.9rem; font: inherit; text-decoration: none;
     }
     button.on { background: #e0c36a; color: #1a1a1a; border-color: #e0c36a; }
-    main > section { display: none; }
-    main > section.on { display: block; }
+    main > section[hidden] { display: none !important; }
     [lang="en"], [lang="ru"] { direction: ltr; text-align: left; }
   </style>
 </head>
@@ -35,12 +34,12 @@
 <section lang="he" dir="rtl" class="on">
   <h1>מדיניות פרטיות — RemindMe</h1>
   <p class="meta">עודכן: 21 בנובמבר 2026</p>
-  <p>RemindMe היא אפליקציה לניהול נטילת תרופות, ומשמשת ככלי עזר אישי בלבד. היא אינה מכשיר רפואי ואינה נותנת ייעוץ רפואי.</p>
+  <p>RemindMe היא אפליקציה לניהול נטילת תרופות, ומשמשת ככלי עזר אישי בלבד. היא אינה מיועדת לאבחון, לטיפול או להחלפת רופא או רוקח, ואינה נותנת ייעוץ רפואי.</p>
 
   <h2>הרשימה בטלפון</h2>
-  <p>רשימת התרופות של המשתמש נשמרת בטלפון. היא כוללת שמות, שעות, מינון, הערות, היסטוריית נטילה, מלאי, שפה והגדרות. תמונות הכדורים נשמרות כקבצים בטלפון. אין למפעיל האפליקציה שרת שמקבל את הרשימה הזו.</p>
+  <p>רשימת התרופות של המשתמש נשמרת בטלפון. היא כוללת שמות, שעות, מינון, הערות, היסטוריית נטילה, מלאי, שפה והגדרות. תמונות הכדורים נשמרות כקבצים בטלפון. אין למפעיל האפליקציה שרת שמקבל את הרשימה הזו. הנתונים נשמרים באחסון הפרטי של האפליקציה. האפליקציה לא מוסיפה להם הצפנה משלה.</p>
   <p>טביעת האצבע נבדקת על ידי המכשיר עצמו. האפליקציה לא מקבלת את טביעת האצבע ולא שומרת אותה.</p>
-  <p>הקראת שם התרופה נעשית במנוע הדיבור של המכשיר. האפליקציה לא שולחת את השם לשרת משלה.</p>
+  <p>הקראת שם התרופה והמנה נעשית במנוע הדיבור שמוגדר במכשיר. האפליקציה לא שולחת את הטקסט לשרת משלה. אם המנוע שנבחר במכשיר מעבד דיבור בענן, העיבוד תלוי בספק המנוע ובהגדרות המכשיר.</p>
   <p>המצלמה משמשת לקריאת ברקוד על אריזה, ולצילום תמונת כדור אם המשתמש בוחר להוסיף תמונה. תמונת הברקוד נבדקת במכשיר ולא נשמרת. תמונת הכדור נשמרת במכשיר.</p>
 
   <h2>רשימת הברקודים באפליקציה</h2>
@@ -73,7 +72,7 @@
 
   <h2>מגבלת אחריות</h2>
   <p>האפליקציה ניתנת ככלי עזר, בלי התחייבות שהיא תפעל בלי הפסקה, בלי תקלה, או שההתראות והמידע יהיו מדויקים תמיד.</p>
-  <p>בכפוף לדין, מפעיל האפליקציה לא אחראי לנזק שנגרם מהזנת מידע שגוי, מהסתמכות על האפליקציה בניגוד לאמור כאן, או משימוש שאינו לפי הנחיה רפואית. אין באמור כדי לבטל אחריות שהדין אינו מאפשר להגביל או לשלול.</p>
+  <p>בכפוף לדין, מפעיל האפליקציה לא אחראי לנזק שנגרם מהזנת מידע שגוי, מהסתמכות על האפליקציה בניגוד לאמור כאן, או משימוש שאינו לפי הנחיה רפואית. אין באמור כדי לבטל אחריות שהדין אינו מאפשר להגביל או לשלול, זכות צרכנית מחייבת, או זכות לפנות לבית משפט. אישור תנאי השימוש אינו מונע פנייה כזו.</p>
 
   <h2>גורמים אחרים</h2>
   <p>משרד הבריאות, openFDA ו-Google מפעילים שירותים משלהם. מפעיל האפליקציה לא שולט בהם ולא אחראי למדיניות שלהם או לתקלה אצלם.</p>
@@ -85,15 +84,15 @@
   <p><a href="mailto:alexg657@gmail.com">alexg657@gmail.com</a></p>
 </section>
 
-<section lang="en">
+<section lang="en" hidden>
   <h1>Privacy policy — RemindMe</h1>
   <p class="meta">Updated: 21 November 2026</p>
-  <p>RemindMe is an app for managing when medicines are taken. It is a personal aid only. It is not a medical device and it does not give medical advice.</p>
+  <p>RemindMe is an app for managing when medicines are taken. It is a personal aid only. It is not intended for diagnosis, treatment, or as a substitute for a doctor or pharmacist, and it does not give medical advice.</p>
 
   <h2>The list on the phone</h2>
-  <p>The user’s medicine list is stored on the phone. It includes names, times, doses, notes, the history of doses taken, stock, the language, and settings. Pill photos are stored as files on the phone. The operator of the app does not run a server that receives this list.</p>
+  <p>The user’s medicine list is stored on the phone. It includes names, times, doses, notes, the history of doses taken, stock, the language, and settings. Pill photos are stored as files on the phone. The operator of the app does not run a server that receives this list. The data stays in the app’s private storage. The app does not add its own encryption to it.</p>
   <p>The fingerprint is checked by the device itself. The app does not receive or store the fingerprint.</p>
-  <p>The medicine name is read aloud by the device’s own speech engine. The app does not send the name to a server of its own.</p>
+  <p>The medicine name and dose are spoken by the speech engine selected on the device. The app does not send that text to a server of its own. If the engine selected on the device processes speech in the cloud, that processing depends on the engine’s provider and on the device settings.</p>
   <p>The camera is used to read a barcode on a package, and to take a pill photo if you choose to add one. The barcode picture is checked on the device and is not kept. The pill photo is saved on the device.</p>
 
   <h2>The barcode list in the app</h2>
@@ -126,7 +125,7 @@
 
   <h2>Limit of responsibility</h2>
   <p>The app is provided as an aid, with no commitment that it will run without interruption, without faults, or that alerts and information will always be accurate.</p>
-  <p>Subject to applicable law, the operator of the app is not responsible for harm that comes from entering incorrect information, from relying on the app contrary to what is stated here, or from use that does not follow medical instructions. Nothing here removes liability that the law does not allow to be limited or excluded.</p>
+  <p>Subject to applicable law, the operator of the app is not responsible for harm that comes from entering incorrect information, from relying on the app contrary to what is stated here, or from use that does not follow medical instructions. Nothing here removes liability that the law does not allow to be limited or excluded, a mandatory consumer right, or the right to go to court. Accepting the terms does not prevent that.</p>
 
   <h2>Other services</h2>
   <p>The Ministry of Health, openFDA, and Google run their own services. The operator of the app does not control them and is not responsible for their policies or for a fault on their side.</p>
@@ -138,15 +137,15 @@
   <p><a href="mailto:alexg657@gmail.com">alexg657@gmail.com</a></p>
 </section>
 
-<section lang="ru">
+<section lang="ru" hidden>
   <h1>Политика конфиденциальности — RemindMe</h1>
   <p class="meta">Обновлено: 21 ноября 2026</p>
-  <p>RemindMe — приложение для учёта приёма лекарств. Это только личное вспомогательное средство. Оно не является медицинским изделием и не даёт медицинских советов.</p>
+  <p>RemindMe — приложение для учёта приёма лекарств. Это только личное вспомогательное средство. Оно не предназначено для диагностики, лечения или замены врача или фармацевта и не даёт медицинских советов.</p>
 
   <h2>Список на телефоне</h2>
-  <p>Список лекарств пользователя хранится на телефоне. В нём названия, время, дозы, заметки, история приёма, запас, язык и настройки. Фотографии таблеток хранятся на телефоне как файлы. У оператора приложения нет сервера, который получает этот список.</p>
+  <p>Список лекарств пользователя хранится на телефоне. В нём названия, время, дозы, заметки, история приёма, запас, язык и настройки. Фотографии таблеток хранятся на телефоне как файлы. У оператора приложения нет сервера, который получает этот список. Данные хранятся в закрытом хранилище приложения. Приложение не добавляет к ним собственное шифрование.</p>
   <p>Отпечаток проверяет само устройство. Приложение не получает и не сохраняет отпечаток.</p>
-  <p>Название лекарства произносит речевой движок устройства. Приложение не отправляет название на свой сервер.</p>
+  <p>Название лекарства и дозу произносит речевой движок, выбранный на устройстве. Приложение не отправляет этот текст на свой сервер. Если выбранный движок обрабатывает речь в облаке, эта обработка зависит от поставщика движка и от настроек устройства.</p>
   <p>Камера используется чтобы прочитать штрихкод на упаковке и чтобы сфотографировать таблетку, если пользователь добавляет фото. Снимок штрихкода проверяется на устройстве и не сохраняется. Фотография таблетки сохраняется на устройстве.</p>
 
   <h2>Список штрихкодов в приложении</h2>
@@ -179,7 +178,7 @@
 
   <h2>Ограничение ответственности</h2>
   <p>Приложение предоставляется как вспомогательное средство, без обязательства работать без перерывов и сбоев и без обязательства, что оповещения и сведения всегда точны.</p>
-  <p>В пределах, допускаемых законом, оператор приложения не отвечает за вред из-за неверных сведений, из-за опоры на приложение вопреки сказанному здесь или из-за использования не по медицинским указаниям. Настоящее положение не отменяет ответственность, которую закон не позволяет ограничить или исключить.</p>
+  <p>В пределах, допускаемых законом, оператор приложения не отвечает за вред из-за неверных сведений, из-за опоры на приложение вопреки сказанному здесь или из-за использования не по медицинским указаниям. Настоящее положение не отменяет ответственность, которую закон не позволяет ограничить или исключить, обязательное право потребителя или право обратиться в суд. Согласие с условиями этому не препятствует.</p>
 
   <h2>Другие службы</h2>
   <p>Минздрав, openFDA и Google ведут собственные службы. Оператор приложения ими не управляет и не отвечает за их политику или за сбой на их стороне.</p>
@@ -202,7 +201,9 @@
   function show(code) {
     if (code !== "he" && code !== "en" && code !== "ru") code = "he";
     document.querySelectorAll("main > section").forEach(function (section) {
-      section.classList.toggle("on", section.lang === code);
+      var active = section.lang === code;
+      section.hidden = !active;
+      section.classList.toggle("on", active);
     });
     document.querySelectorAll("nav button").forEach(function (button) {
       button.classList.toggle("on", button.getAttribute("data-lang") === code);
