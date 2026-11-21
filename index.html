@@ -12,14 +12,27 @@
     p, li { font-size: 1rem; }
     .meta { color: #bdbdbd; margin-bottom: 1.4rem; }
     a { color: #e0c36a; }
-    section + section { border-top: 1px solid #3a3a3a; margin-top: 2.2rem; padding-top: 0.4rem; }
+    nav { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.2rem; }
+    button, nav a.chip {
+      background: #2a2a2a; color: #f2f2f2; border: 1px solid #4a4a4a;
+      border-radius: 999px; padding: 0.45rem 0.9rem; font: inherit; text-decoration: none;
+    }
+    button.on { background: #e0c36a; color: #1a1a1a; border-color: #e0c36a; }
+    main > section { display: none; }
+    main > section.on { display: block; }
     [lang="en"], [lang="ru"] { direction: ltr; text-align: left; }
   </style>
 </head>
 <body>
 <main>
+<nav aria-label="Language">
+  <button type="button" data-lang="he">עברית</button>
+  <button type="button" data-lang="en">English</button>
+  <button type="button" data-lang="ru">Русский</button>
+  <a class="chip" id="other-doc" href="terms.html">תנאי שימוש</a>
+</nav>
 
-<section lang="he" dir="rtl">
+<section lang="he" dir="rtl" class="on">
   <h1>מדיניות פרטיות — RemindMe</h1>
   <p class="meta">עודכן: 21 בנובמבר 2026</p>
   <p>RemindMe היא אפליקציה לניהול נטילת תרופות, ומשמשת ככלי עזר אישי בלבד. היא אינה מכשיר רפואי ואינה נותנת ייעוץ רפואי.</p>
@@ -39,7 +52,8 @@
 
   <h2>גיבוי</h2>
   <p>הגיבוי כבוי כברירת מחדל, וזמין במנוי. אם המשתמש מפעיל אותו, רשומת התרופות, כולל שעות, הערות, היסטוריה והגדרות ההתראה, וגם השפה, הגדרת התראת המלאי ותמונות הכדורים, נשמרים בתיקייה פרטית בחשבון Google שהמשתמש בחר. כתובת החשבון נשמרת במכשיר כדי להציג איזה חשבון נבחר.</p>
-  <p>כיבוי הגיבוי עוצר גיבויים חדשים. עותק שכבר נשמר נשאר באותו חשבון Google.</p>
+  <p>כיבוי הגיבוי עוצר גיבויים חדשים. עותק שכבר נשמר נשאר באותו חשבון Google. מחיקה של הגיבוי נעשית מתוך האפליקציה, בפעולה «מחק גיבוי מהענן», ורק לקבצים שהאפליקציה יצרה בתיקייה הפרטית. הקבצים נשלחים ב-HTTPS. האפליקציה לא מצפינה אותם במפתח נפרד לפני השליחה.</p>
+  <p>גיבוי המערכת של Android והעברה ממכשיר למכשיר מוגדרים כך שלא יכללו את רשימת התרופות, ההגדרות או תמונות הכדורים. עותק שנוצר בגרסה ישנה יותר, אם קיים, לא נמחק אוטומטית.</p>
 
   <h2>מנוי</h2>
   <p>הרכישה מתבצעת דרך Google Play. האפליקציה לא מקבלת פרטי כרטיס אשראי. היא רק בודקת אם המנוי פעיל.</p>
@@ -48,7 +62,7 @@
   <p>אין פרסומות, ואין מכירה של נתונים. אין איסוף של מיקום, אנשי קשר או מזהה פרסום.</p>
 
   <h2>מחיקה</h2>
-  <p>מחיקת תרופה, ניקוי היסטוריה, או הסרת האפליקציה מוחקים את הנתונים שנמצאים במכשיר. גיבוי שכבר נשמר בחשבון Google נשאר שם עד שהמשתמש מסיר את הגישה של האפליקציה מחשבון Google שלו.</p>
+  <p>מחיקת תרופה מוחקת את הרשומה שלה מהטלפון, כולל ההיסטוריה שלה. ניקוי נתוני האפליקציה או הסרתה מוחקים את מה שנשמר במכשיר. הם לא מוחקים בהכרח גיבוי שכבר נשמר ב-Google Drive, ולא עותק ישן של גיבוי מערכת אם נוצר בעבר. ביטול הרשאת Google לא נבדק כפעולה שמוחקת את הקבצים. המחיקה של הגיבוי בענן היא הפעולה «מחק גיבוי מהענן».</p>
 
   <h2>אחריות על המידע ועל ההתראות</h2>
   <p>המשתמש אחראי לפרטים שהוא מזין, לשעות, למינונים ולמשך הטיפול, ולבדיקה שהם תואמים להנחיה שקיבל מרופא או מרוקח.</p>
@@ -91,7 +105,8 @@
 
   <h2>Backup</h2>
   <p>Backup is off by default, and it is part of the subscription. If you turn it on, the medicine records, including times, notes, history, and alert settings, together with the language, the stock-alert setting, and pill photos, are stored in a private folder in the Google account you choose. That account’s address is saved on the device so the app can show which account is selected.</p>
-  <p>Turning backup off stops new backups. A copy that was already saved stays in that Google account.</p>
+  <p>Turning backup off stops new backups. A copy that was already saved stays in that Google account. The backup is deleted from the app with “Delete cloud backup”, and only for files this app created in the private folder. The files are sent over HTTPS. The app does not encrypt them with a separate key before sending.</p>
+  <p>Android system backup and device-to-device transfer are set so they do not include the medicine list, the settings, or pill photos. A copy made by an older version, if one exists, is not deleted automatically.</p>
 
   <h2>Subscription</h2>
   <p>The purchase is handled by Google Play. The app does not receive card details. It only checks whether the subscription is active.</p>
@@ -100,7 +115,7 @@
   <p>There are no ads, and data is not sold. The app does not collect location, contacts, or an advertising identifier.</p>
 
   <h2>Deletion</h2>
-  <p>Deleting a medicine, clearing history, or uninstalling the app removes the data stored on the device. A backup already saved in a Google account stays there until you remove the app’s access from that Google account.</p>
+  <p>Deleting a medicine removes that record from the phone, including its history. Clearing the app’s data or uninstalling it removes what is stored on the device. That does not necessarily delete a backup already stored in Google Drive, or an older system-backup copy if one was made before. Revoking Google access has not been verified as a step that deletes the files. The cloud backup is deleted with “Delete cloud backup”.</p>
 
   <h2>Responsibility for the information and the alerts</h2>
   <p>You are responsible for the details you enter, the times, the doses, and the length of treatment, and for checking that they match the instructions you received from a doctor or a pharmacist.</p>
@@ -143,7 +158,8 @@
 
   <h2>Резервная копия</h2>
   <p>Копия по умолчанию выключена и доступна в подписке. Если её включить, записи лекарств, включая время, заметки, историю и настройки оповещения, а также язык, настройка оповещения о запасе и фотографии таблеток сохраняются в частной папке выбранного аккаунта Google. Адрес этого аккаунта сохраняется на устройстве, чтобы было видно, какой аккаунт выбран.</p>
-  <p>Выключение копии останавливает новые сохранения. Уже сохранённая копия остаётся в том аккаунте Google.</p>
+  <p>Выключение копии останавливает новые сохранения. Уже сохранённая копия остаётся в том аккаунте Google. Копия удаляется из приложения действием «Удалить копию из облака», и только файлы, которые приложение создало в частной папке. Файлы отправляются по HTTPS. Приложение не шифрует их отдельным ключом перед отправкой.</p>
+  <p>Системная копия Android и перенос с устройства на устройство настроены так, чтобы не включать список лекарств, настройки и фотографии таблеток. Копия, сделанная более старой версией, если она есть, сама не удаляется.</p>
 
   <h2>Подписка</h2>
   <p>Покупку проводит Google Play. Приложение не получает данные карты. Оно только проверяет, активна ли подписка.</p>
@@ -152,7 +168,7 @@
   <p>Рекламы нет, и данные не продаются. Приложение не собирает местоположение, контакты и рекламный идентификатор.</p>
 
   <h2>Удаление</h2>
-  <p>Удаление лекарства, очистка истории или удаление приложения стирают данные на устройстве. Копия, уже сохранённая в аккаунте Google, остаётся там, пока вы не отзовёте доступ приложения к этому аккаунту.</p>
+  <p>Удаление лекарства стирает его запись с телефона, включая историю. Очистка данных приложения или его удаление стирают то, что хранится на устройстве. Это не обязательно удаляет копию, уже сохранённую в Google Drive, и старую системную копию, если она была создана раньше. Отзыв доступа Google не проверялся как действие, которое удаляет файлы. Облачная копия удаляется действием «Удалить копию из облака».</p>
 
   <h2>Ответственность за сведения и оповещения</h2>
   <p>Пользователь отвечает за введённые сведения, время, дозы и длительность лечения, а также за проверку, что они совпадают с указаниями врача или фармацевта.</p>
@@ -176,5 +192,35 @@
 </section>
 
 </main>
+<script>
+(function () {
+  var labels = {
+    he: "תנאי שימוש",
+    en: "Terms of use",
+    ru: "Условия использования"
+  };
+  function show(code) {
+    if (code !== "he" && code !== "en" && code !== "ru") code = "he";
+    document.querySelectorAll("main > section").forEach(function (section) {
+      section.classList.toggle("on", section.lang === code);
+    });
+    document.querySelectorAll("nav button").forEach(function (button) {
+      button.classList.toggle("on", button.getAttribute("data-lang") === code);
+    });
+    document.documentElement.lang = code;
+    document.documentElement.dir = code === "he" ? "rtl" : "ltr";
+    var other = document.getElementById("other-doc");
+    other.textContent = labels[code];
+    other.href = "terms.html" + (code === "he" ? "" : "#" + code);
+    if (location.hash !== (code === "he" ? "" : "#" + code)) {
+      history.replaceState(null, "", code === "he" ? location.pathname : "#" + code);
+    }
+  }
+  document.querySelectorAll("nav button").forEach(function (button) {
+    button.addEventListener("click", function () { show(button.getAttribute("data-lang")); });
+  });
+  show((location.hash || "#he").slice(1));
+})();
+</script>
 </body>
 </html>
